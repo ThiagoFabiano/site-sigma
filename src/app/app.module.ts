@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/home/home.component';
 import { AuthInterceptor } from './core/handlers/http.handle-interceptor';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
@@ -15,7 +14,6 @@ import { NgxMaskModule } from 'ngx-mask';
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
   ],
   imports: [
     BrowserModule,

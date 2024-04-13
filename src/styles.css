@@ -1,15 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700&display=swap");
 @import "../node_modules/ngx-toastr/toastr.css";
 
+:root {
+  --verde-sigma-escuro: #077068;
+}
+
 body {
-  font-family: Poppins, Helvetica, "sans-serif" !important;
-  background-color: #f9fafb !important;
+  font-family: Inter, Helvetica, "sans-serif" !important;
+  background-color: #D3D5D0 !important;
   color: #555;
   height: 100%;
 }
 
 header {
-  background-color: #427AA1;
+  background-color: #00706C !important;
+}
+.bg-header {
+  background-color: #00706C !important;
 }
 
 a:hover,
@@ -107,4 +114,33 @@ a{
 .ng-invalid-btn {
   border: 1px solid lightcoral !important;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px #fde6e8;
+}
+
+.fw-100{
+  font-weight: 100;
+}
+.fw-200{
+  font-weight: 200;
+}
+.fw-300{
+  font-weight: 300;
+}
+.fw-400{
+  font-weight: 400;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-700{
+  font-weight: 700;
+}
+
+.text-dark-green{
+  color: var(--verde-sigma-escuro)
+}
+.bg-dark-green{
+  background-color: var(--verde-sigma-escuro) !important;
 }

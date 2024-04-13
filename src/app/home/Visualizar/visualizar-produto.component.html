@@ -1,0 +1,48 @@
+<div class="modal-backdrop fade show"(click)="voltar()"></div>
+<div class="modal fade show" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title fs-2 fw-700 text-dark-green">{{produto?.nome}}</span>
+        <button type="button" class="btn-close" (click)="voltar()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let path of produto?.pathImagens ; let i=index" [ngClass]="{ 'active': i+1 == fotoAtiva }">
+                  <img src="../../../assets/images/{{path}}" class="img-visualizar d-block">
+                </div>
+
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="las la-angle-left fs-2 text-dark-green bg-white rounded p-2" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next " data-bs-target="#carouselExample" data-bs-slide="next">
+                <i class="las la-angle-right fs-2 text-dark-green bg-white rounded p-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4 ms-1">
+          <div class="col col-descricao">
+            <span class="fs-4 fw-500">{{produto?.descricao}}</span>
+          </div>
+        </div>
+        <div class="row mt-3 ms-1">
+          <div class="col-lg-4 col-valor">
+            <span class="fs-2 fw-700 text-dark-green me-3">{{produto?.valor}}</span>
+
+          </div>
+          <div class="col-lg-8 col-btn">
+            <a class="btn btn-lg bg-dark-green text-white fw-600 float-end me-2" [href]="linkWhatsapp" target="_blank"><img src="../../../assets/images/whatsapp-logo.png" height="35" width="35" class="img-fluid"> Pedir No Whatsapp</a>
+
+          </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
